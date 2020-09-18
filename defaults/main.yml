@@ -5,6 +5,8 @@ grub_timeout: 5
 
 grub_recordfail_timeout: "{{ grub_timeout }}"
 
+grub_restart_after_update: True
+
 # Add options here, for example:
 # grub_options:
 #   - option: cgroup_enable
