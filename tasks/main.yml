@@ -8,8 +8,9 @@
     name: "{{ grub_packages }}"
     state: present
 
-- debug:
-    var: grub_update_grub_command
+- name: restart after grub update
+  debug:
+    var: grub_restart_after_update
 
 - name: set GRUB_TIMEOUT
   lineinfile:
