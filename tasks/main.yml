@@ -8,10 +8,6 @@
     name: "{{ grub_packages }}"
     state: present
 
-- name: restart after grub update
-  debug:
-    var: grub_restart_after_update
-
 - name: set GRUB_TIMEOUT
   lineinfile:
     path: /etc/default/grub
