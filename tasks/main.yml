@@ -8,6 +8,9 @@
     name: "{{ grub_packages }}"
     state: present
 
+- debug:
+    var: grub_update_grub_command
+
 - name: set GRUB_TIMEOUT
   lineinfile:
     path: /etc/default/grub
